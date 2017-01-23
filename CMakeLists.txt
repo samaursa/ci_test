@@ -8,7 +8,7 @@ ExternalProject_Add(catch
   GIT_TAG "master"
 
   SOURCE_DIR "${CMAKE_SOURCE_DIR}/dep/catch"
-  CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${CMAKE_SOURCE_DIR}/install/catch/
+  CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${CMAKE_SOURCE_DIR}/install/catch/ -H. -BBuild -Wdev
 
   TEST_COMMAND ""
   )
