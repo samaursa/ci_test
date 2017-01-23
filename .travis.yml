@@ -10,17 +10,17 @@ matrix:
           sources:
             - ubuntu-toolchain-r-test
           packages:
-            - g++-6.3
-      env: COMPILER=g++-6.3
+            - g++-5.4
+      env: COMPILER=g++-5.4
     - compiler: clang
       addons:
         apt:
           sources:
             - ubuntu-toolchain-r-test
-            - llvm-toolchain-precise-3.9
+            - llvm-toolchain-precise-3.8
           packages:
-            - clang-3.9
-      env: COMPILER=clang++-3.9
+            - clang-3.8
+      env: COMPILER=clang++-3.8
 
 before_install:
   - sudo apt-get update -qq
@@ -30,8 +30,4 @@ script:
   - cd build
   - cmake -DCMAKE_CXX_COMPILER=$COMPILER .. && make
   - cd ..
-  - cd game
-  - mkdir build
-  - cd build
-  - cmake -CMAKE_CXX_COMPILER=$COMPILER .. && make
-  - ctest
+  - ./install/game/bin/MathTest.exe
