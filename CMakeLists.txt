@@ -17,11 +17,14 @@ set(CATCH_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/install/catch/include/")
 
 ExternalProject_Add(game
   SOURCE_DIR "${CMAKE_SOURCE_DIR}/game/"
+  DEPENDS catch
 
   CMAKE_ARGS -DGAME_SUPERBUILD_DIR=${CMAKE_SOURCE_DIR} -DCMAKE_INSTALL_PREFIX=${CMAKE_SOURCE_DIR}/install/game/ -H. -BBuild -Wdev
 
   TEST_COMMAND ""
   )
+
+
 
 enable_testing()
 #add_test(NAME MathTest COMMAND Test)
