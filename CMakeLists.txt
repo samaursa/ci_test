@@ -24,4 +24,4 @@ ExternalProject_Add(game
   )
 
 enable_testing()
-add_test(NAME MathTest COMMAND Test)
+#add_test(NAME MathTest COMMAND Test)

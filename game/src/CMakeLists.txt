@@ -12,7 +12,9 @@ add_executable(MathTest
 target_link_libraries(MathTest Math)
 
 install(TARGETS Math MathTest 
-        RUNTIME DESTINATION "bin/"
-        LIBRARY DESTINATION "lib/"
-        ARCHIVE DESTINATION "lib/static"
-        )
+  RUNTIME DESTINATION "bin/" 
+  LIBRARY DESTINATION "lib/"
+  ARCHIVE DESTINATION "lib/static"
+)
+
+add_test(math_test MathTest)
