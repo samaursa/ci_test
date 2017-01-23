@@ -1,4 +1,4 @@
-include_directories(${GAME_SUPERBUILD_DIR}/install/catch/include})
+include_directories(${GAME_SUPERBUILD_DIR}/install/catch/include)
 
 add_library(Math
   "include/Vector.h"

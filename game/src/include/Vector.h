@@ -1,4 +1,11 @@
 class Vector
 {
-  float x, y, z;
+public:
+
+    Vector(float x = 0.0f, float y = 0.0f, float z = 0.0f);
+
+    Vector operator+(const Vector& other) const;
+    Vector operator-(const Vector& other) const;
+
+    float x = 0.0f, y = 0.0f, z = 0.0f;
 };
