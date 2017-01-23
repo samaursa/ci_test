@@ -30,4 +30,8 @@ script:
   - cd build
   - cmake -DCMAKE_CXX_COMPILER=$COMPILER .. && make
   - cd ..
-  - ./install/game/bin/MathTest.exe
+  - cd game
+  - mkdir build
+  - cd build
+  - cmake -DCMAKE_CXX_COMPILER=$COMPILER .. && make
+  - ctest
