@@ -28,10 +28,6 @@ matrix:
             - cmake-data
       env: COMPILER=clang++-3.8
 
-before_install:
-  - sudo apt-get update -qq --allow-unauthenticated
-  - sudo apt-get install -y libopencv-dev --allow-unauthenticated
-
 script:
   - mkdir build
   - cd build
