@@ -35,6 +35,10 @@ install:
         which cmake || brew install cmake;
     fi
 
+before_script:
+  - export CXX=${COMPILER}
+  - cd ${TRAVIS_BUILD_DIR}
+
 script:
   - mkdir build
   - cd build
