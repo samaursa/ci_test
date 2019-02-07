@@ -12,7 +12,7 @@ matrix:
             - george-edison55-precise-backports
           packages:
             - g++-5
-            - cmake
+            - cmake-3.8
             - cmake-data
       env: COMPILER=g++-5
     - compiler: clang
@@ -21,7 +21,7 @@ matrix:
           sources:
             - ubuntu-toolchain-r-test
             - llvm-toolchain-precise-3.8
-            - george-edison55-precise-backports 
+            - george-edison55-precise-backports
           packages:
             - clang-3.8
             - cmake
@@ -29,8 +29,8 @@ matrix:
       env: COMPILER=clang++-3.8
 
 before_install:
-  - sudo apt-get update -qq
-  - sudo apt-get install -y libopencv-dev
+  - sudo apt-get update -qq --allow-unauthenticated
+  - sudo apt-get install -y libopencv-dev --allow-unauthenticated
 
 script:
   - mkdir build
