@@ -4,7 +4,7 @@ project(CI)
 include(ExternalProject)
 
 ExternalProject_Add(catch
-  GIT_REPOSITORY "https://github.com/samaursa/catch.git" 
+  GIT_REPOSITORY "https://github.com/catchorg/Catch2.git"
   GIT_TAG "master"
 
   SOURCE_DIR "${CMAKE_SOURCE_DIR}/dep/catch"
